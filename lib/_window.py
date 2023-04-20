@@ -78,8 +78,7 @@ class Window(QtWidgets.QWidget):
         print("old", self.oldPos.y() ,"window", self.geometry().y())
 
     def mouseMoveEvent(self, evt):
-        if  time.time() - self.resizing_time > 0.4:
-            print(self.oldPos.y() - self.geometry().y())
+        if self.frame.underMouse():
             delta = QPoint(evt.globalPos() - self.oldPos)
             self.move(self.x() + delta.x(), self.y() + delta.y())
             self.oldPos = evt.globalPos()    
