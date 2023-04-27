@@ -17,13 +17,13 @@ class Tools:
                   }
     
     def save_params(dic_params):
-        file = rf'{os.path.split(os.path.dirname(__file__))[0]}/res/config.ini'
+        file = rf'{os.path.split(os.path.dirname(__file__))[0]}/res/{os.getlogin()}_settings.ini'
         with open(file, 'w') as file_object:  
             json.dump(dic_params, file_object, indent = 4) 
             
     def load_params():
         try:
-            file = rf'{os.path.split(os.path.dirname(__file__))[0]}/res/config.ini'
+            file = rf'{os.path.split(os.path.dirname(__file__))[0]}/res/{os.getlogin()}_settings.ini'
             with open(file, 'r') as file_object:  
                 dic_params = json.load(file_object)     
         except:

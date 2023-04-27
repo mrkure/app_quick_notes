@@ -5,7 +5,7 @@ Created on Tue Oct 18 16:03:13 2022
 @author: mrkure
 """
 from mklib.lib_io import mkIO
-mkIO.activate_env(1, __file__)
+mkIO.activate_env(1, "work", __file__, 0)
 
 import os
 from PyQt5 import QtCore
@@ -22,7 +22,7 @@ class Notes(QSystemTrayIcon, QWidget):
      
 #%% TRAY SETTINGS
         
-        self.icon_running   = QIcon( rf'{os.path.dirname(__file__)}\res\dg.ico' )            
+        self.icon_running   = QIcon( rf'{os.path.dirname(__file__)}\res\dg.ico' )          
         self.icon_stopped   = QIcon( rf'{os.path.dirname(__file__)}\res\dr.ico')   
 
         self.menu           = QMenu() 
