@@ -4,8 +4,8 @@ Created on Tue Oct 18 16:03:13 2022
 
 @author: mrkure
 """
-from mklib.lib_io import mkIO
-mkIO.activate_env(1, "work", __file__, 0)
+# from mklib.lib_io import mkIO
+# mkIO.activate_env(1, "work", __file__, 0)
 
 import os
 from PyQt5 import QtCore
