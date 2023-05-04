@@ -12,7 +12,7 @@ from PyQt5 import QtCore
 from PyQt5.QtGui import QIcon
 from PyQt5.QtWidgets import QWidget, QSystemTrayIcon, QAction, QMenu, QApplication
 
-from lib._window import Window, UI
+from lib._main_gui import Window, UI
 
 
 class Notes(QSystemTrayIcon, QWidget):
