@@ -35,7 +35,7 @@ class mkSerial:
 
 #%% MAIN
 if __name__ == '__main__':
-    pass
+    mkSerial.print_serial_devices()
 
 
 

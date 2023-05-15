@@ -4,7 +4,7 @@ Created on Thu Feb 23 14:58:34 2023
 
 @author: CAZ2BJ
 """
-
+from datetime import datetime
 import os, sys, subprocess, stat 
 
 class mkIO:
@@ -194,4 +194,17 @@ class mkIO:
                 result =  i
         if result == '':
             result = 'Results'
+        return result
+    
+    def create_leepa_str_date_path(path, string, ext:str) ->str:
+        """ get tesla string from path, if not found return enpty string"""
+        dt_string = datetime.now().strftime("%Y-%m-%d_%H%M%S")
+        path      = os.path.normpath(path)
+        parts     = path.split(os.sep)
+        leepa     = ''
+        for part in parts:
+            if len(part) == 11 and 'E' in part and '-'in part:
+                leepa =  part    
+        if leepa: string = f'_{string}'
+        result = f'{path}\{leepa}{string}_{dt_string}.{ext}'
         return result
